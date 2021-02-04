@@ -14,11 +14,11 @@ The notebook [`analyze-results.ipynb`](analyze-results.ipynb) go through the ste
 * Calculate EDR and velocity derivatives from initial dataset
 * Find closest sources: intercepted location on the RHI scan
 
-![interp_calc.png](interp_calc.png)
+![interp_calc.png](interp_calc.jpg)
  
 * Retrieve results: distance from flash initiation and radar measurements at interception
 
-![interp_sources.png](interp_sources.png)
+![interp_sources.png](interp_sources.jpg)
 
 Example Use Case
 --------
