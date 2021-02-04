@@ -5,17 +5,26 @@ It combines radar and lightining data into the same framework allowing to retrie
 Getting the dataset
 --------
 
-The radar and lightning dataset are available on [Zenodo](). The radar folder contains TTU Ka-band RHI scans for storms occurred during the spring and summer of 2015 - 2016 in the South Plains of the Texas Caprock. The files were processed in the netcdf format by the KTaL field experiment members. The lightning folder contains the LMA source data as events table in the hdf5 format after applying the flash sorting process available in [lmatools](https://github.com/deeplycloudy/lmatools).
+The radar and lightning dataset are available on [KTaL dataset](zenodo). The radar folder contains TTU Ka-band RHI scans for storms occurred during the spring and summer of 2015 - 2016 in the South Plains of the Texas Caprock. The files were processed in NetCDF4 format by the KTaL field experiment members using [Py-ART](https://github.com/ARM-DOE/pyart). The lightning folder contains the LMA source data as events table in HDF5 format after applying the flash sorting process available in [lmatools](https://github.com/deeplycloudy/lmatools).
 
-Constructing the dataset
+Getting the Results
 --------
-The notebook go through the steps to obtain the tables for posterior analysis.
+The notebook [`analyze-results.ipynb`](analyze-results.ipynb) go through the steps to obtain the result tables using different interpolations: [`Nearest Neighbor`](turbulence_table_nearestneighbor.csv), [`Barnes 1`](turbulence_table_objectiveanalysis1.csv), [`Barnes 2`](turbulence_table_objectiveanalysis2.csv).
 
+* Calculate EDR and velocity derivatives from initial dataset
+* Find closest sources: intercepted location on the RHI scan
+
+![interp_calc.png](interp_calc.png)
+ 
+* Retrieve results: distance from flash initiation and radar measurements at interception
+
+![interp_sources.png](interp_sources.png)
 
 Example Use Case
 --------
-The notebook shows the chosen analysis for the dataset obtained by the previous steps.
+The notebook [`analyze-results.ipynb`](analyze-results.ipynb) shows with the results obtained by the previous steps how EDR and spatial velocity derivative varied with distance from flash initiation.
 
+![turb-lightning.png](turb-lightning.png)
 
 Dependencies
 --------
@@ -25,7 +34,8 @@ Dependencies
  * Pandas
  * Xarray
  * Cartopy
+ * Shapely
  * [Py-ART](https://github.com/ARM-DOE/pyart)
  * [lmatools](https://github.com/deeplycloudy/lmatools)
  * [PyTDA](https://github.com/nasa/PyTDA)
-
+ 
