@@ -148,6 +148,7 @@ def plot_EDR_dVR(table):
                           c = np.log10(table.area.values),
                           cmap = 'viridis', vmin = 0, vmax = 3, alpha = 0.65,
                           edgecolor='dimgrey')
+    ax1.axhline(0, color = 'k', linestyle = 'dotted')
 
     legend_elements = [Line2D([0], [0], color='dimgrey',lw=0,linestyle = None,marker = 'o',
                           markersize = np.sqrt(size_pt(5000,table.init_alt.values.min(), table.init_alt.values.max())*20),
@@ -170,7 +171,7 @@ def plot_EDR_dVR(table):
     plt.xticks(fontsize = 14)
     plt.yticks(fontsize = 14)
     plt.xlabel('Distance from the flash initiation point to the interception point on the RHI scan (m)', fontsize = 14)
-    plt.ylabel('EDR $(m^2 s^{-3}) ^{1/3}$', fontsize = 15)
+    plt.ylabel('EDR $(m^2 s^{-3}) ^{1/3}$', fontsize = 14)
 
     # -- 2
     ax2 = fig.add_subplot(122)
@@ -228,7 +229,13 @@ def plot_EDR_dVR(table):
     plt.ylabel('Velocity derivative in space ($s^{-1}$)', fontsize = 14)
     plt.xticks(fontsize = 14)
     plt.yticks(fontsize = 14)
-    plt.ylim(-0.14, 0.14)
+    plt.ylim(-0.2, 0.2)
+    
+    td1 = fig.text(0.1274, 0.8898, "a", 
+         fontsize = 18,fontweight = 'bold')
+
+    td2 = fig.text(0.55, 0.8898, "b", 
+             fontsize = 18,fontweight = 'bold')
 
 
 def plot_sources_interp(df_nn, rm_nn, zm_nn, rstd_nn, zstd_nn, nn_dist1_weight_avg, nn_tur_weight_avg, nn_dist1_weight_std, nn_tur_weight_std,
