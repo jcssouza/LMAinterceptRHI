@@ -1,11 +1,11 @@
-This code is used for obtaining the results on J. Souza and E. Bruning, Assessment of turbulence intensity in different spots of lightning flash propagation submitted to Geophysical Reserach Letters. 
+This code is used for obtaining the results on J. Souza and E. Bruning, Observations of the influence of turbulence on lightning initiation and propagation submitted to Geophysical Reserach Letters. 
 
 It combines radar and lightining data into the same framework allowing to retrieve radar detected and derived fields where lightning flash propagated through the radar scan.
 
 Getting the dataset
 --------
 
-The radar and lightning dataset are available on [KTaL dataset](zenodo). The radar folder contains TTU Ka-band RHI scans for storms occurred during the spring and summer of 2015 - 2016 in the South Plains of the Texas Caprock. The files were processed in NetCDF4 format by the KTaL field experiment members using [Py-ART](https://github.com/ARM-DOE/pyart). The lightning folder contains the LMA source data as events table in HDF5 format after applying the flash sorting process available in [lmatools](https://github.com/deeplycloudy/lmatools).
+The radar data is available on DOI: 10.5281/zenodo.4515064 and the lightining data is on DOI: 10.5281/zenodo.4509546 . The radar folder contains TTU Ka-band RHI scans for storms occurred during the spring and summer of 2015 - 2016 in the South Plains of the Texas Caprock. The files were processed in NetCDF4 format by the KTaL field experiment members using [Py-ART](https://github.com/ARM-DOE/pyart). The lightning folder contains the LMA source data as events table in HDF5 format after applying the flash sorting process available in [lmatools](https://github.com/deeplycloudy/lmatools).
 
 Getting the results
 --------
