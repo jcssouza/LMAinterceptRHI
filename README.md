@@ -1,4 +1,4 @@
-This code is used for obtaining the results on J. Souza and E. Bruning, Observations of the influence of turbulence on lightning initiation and propagation submitted to Geophysical Reserach Letters. 
+This code is used for obtaining the results on J. Souza and E. Bruning, [`Assessment of turbulence intensity in different spots of lightning flash propagation`](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021GL095923). 
 
 It combines radar and lightining data into the same framework allowing to retrieve radar detected and derived fields where lightning flash propagated through the radar scan.
 
